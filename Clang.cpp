@@ -4,16 +4,19 @@
 
 #pragma warning(disable:4996)
 
+void get_coefs(long double *a, long double* b, long double* c) {
+	printf("ax^2 + bx + c = 0\n");
+	printf("Input coefficients: a b c\n");
+	scanf("%lf %lf %lf", a, b, c); // Считываем коэф-ы
+}
+
 int main(int argc, char* argv[])
 {
-	long double coefs[3] = { 0.0, 0.0, 0.0 }; // Коэф-ы в конечном уравнении
-	
-	for (int i = 0; i < 3; i++) {
-		printf("Input coefficient of x^%d\n", 2 - i); 
-		scanf("%lf", &coefs[i]); // Считываем коэф-ы
-	}
+	long double a = 0.0, b = 0.0, c = 0.0; // Коэф-ы в конечном уравнении
 
-	long double d = coefs[1] * coefs[1] - 4 * coefs[0] * coefs[2]; // Дискриминант
+	get_coefs(&a, &b, &c);
+
+	long double d = b * b - 4 * a * c; // Дискриминант
 
 	printf("D = %lf\n", d);
 
@@ -22,13 +25,13 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 	
-	if (coefs[0] == 0) { // Если а == 0
-		if (coefs[1]) // Если b != 0, то корень = -c / b
+	if (a == 0) { // Если а == 0
+		if (b) // Если b != 0, то корень = -c / b
 		{
-			printf("One root: x = %lf", -coefs[2] / coefs[1]);
+			printf("One root: x = %lf", -c / b);
 			return 0;
 		}
-		else if (coefs[2] == 0)
+		else if (c == 0)
 		{
 			printf("Any x will do"); // Все коэф-ы равны нулю => Х принадлежит (-Inf; Inf)
 			return 0;
@@ -41,7 +44,7 @@ int main(int argc, char* argv[])
 	}
 
 	if (d == 0) {
-		long double x1 = -coefs[1] / 2 / coefs[0];
+		long double x1 = -b / 2 / a;
 		printf("One root: x = %lf", x1);
 		return 0;
 	}
@@ -49,8 +52,8 @@ int main(int argc, char* argv[])
 	{
 		long double x1, x2;
 
-		x1 = (-coefs[1] + sqrt(d)) / 2 / coefs[0];
-		x2 = (-coefs[1] - sqrt(d)) / 2 / coefs[0];
+		x1 = (-b + sqrt(d)) / 2 / a;
+		x2 = (-b - sqrt(d)) / 2 / a;
 
 		printf("Roots: x1 = %lf, x2 = %lf", x1, x2);
 		return 0;
