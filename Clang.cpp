@@ -5,6 +5,7 @@
 #pragma warning(disable:4996)
 
 #define INF_ROOTS 100
+#define EPSILON 0.000001
 
 int check_linear(long double a, long double b, long double c) 
 {
@@ -27,6 +28,11 @@ int check_linear(long double a, long double b, long double c)
 	
 	return 0;
 }
+
+char is_equal_approx(long double a, long double b) {
+	return (abs(a - b) <= EPSILON);
+}
+
 /*Возвращает количество корней*/
 int solve(long double a, long double b, long double c, long double *x1, long double *x2) 
 {
@@ -55,7 +61,7 @@ int solve(long double a, long double b, long double c, long double *x1, long dou
 		}
 		
 	}
-	else if(d == 0)
+	else if(is_equal_approx(d, 0))
 	{
 		*x1 = -b / 2 / a;
 		return 1;
