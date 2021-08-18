@@ -38,6 +38,8 @@ int solve(long double a, long double b, long double c, long double *x1, long dou
 		return 0;
 	}
 
+	long double d_sqrt = sqrt(d);
+
 	if (lin = check_linear(a, b, c)) 
 	{
 		switch (lin)
@@ -60,8 +62,8 @@ int solve(long double a, long double b, long double c, long double *x1, long dou
 	else
 	{
 		printf("D = %lf\n", d);
-		*x1 = (-b + sqrt(d)) / 2 / a;
-		*x2 = (-b - sqrt(d)) / 2 / a;
+		*x1 = (-b + d_sqrt) / 2 / a;
+		*x2 = (-b - d_sqrt) / 2 / a;
 		return 2;
 	}
 }
