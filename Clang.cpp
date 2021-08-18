@@ -7,6 +7,7 @@
 #define INF_ROOTS 100
 #define EPSILON 0.000001
 
+/*Проверяет, решается ли уравнение как линейное*/
 int check_linear(long double a, long double b, long double c) 
 {
 	if (a == 0) 
@@ -29,7 +30,8 @@ int check_linear(long double a, long double b, long double c)
 	return 0;
 }
 
-char is_equal_approx(long double a, long double b) {
+char is_equal_approx(long double a, long double b) 
+{
 	return (abs(a - b) <= EPSILON);
 }
 
@@ -102,6 +104,7 @@ int main(int argc, char* argv[])
 		printf("Any x will do");
 		break;
 	default:
+		printf("Something went wrong");
 		break;
 	}
 	
