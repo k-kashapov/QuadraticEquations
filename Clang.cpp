@@ -4,6 +4,7 @@
 
 #pragma warning(disable:4996)
 
+#define INF_ROOTS 100
 
 int check_linear(long double a, long double b, long double c) 
 {
@@ -16,7 +17,7 @@ int check_linear(long double a, long double b, long double c)
 		else if (c == 0)
 		{
 			// Все коэф-ы равны нулю => Х принадлежит (-Inf; Inf)
-			return 100;
+			return INF_ROOTS;
 		}
 		else
 		{
@@ -47,8 +48,8 @@ int solve(long double a, long double b, long double c, long double *x1, long dou
 		case 1:
 			*x1 = -c / b;
 			return 1;
-		case 100:
-			return 100;
+		case INF_ROOTS:
+			return INF_ROOTS;
 		default:
 			return 0;
 		}
