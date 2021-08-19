@@ -4,29 +4,29 @@
 
 #pragma warning(disable:4996)
 
-#define INF_ROOTS 100
-#define EPSILON 0.000001
+const int INF_ROOTS = 100;
+const double EPSILON = 0.000001;
 
 // Принимает коэф-ы b и c, указатель на x1. Решает уравнение как линейное, возвращает количество корней: 1, INF или 0, ответ помещает в *x1 
-int solve_linear(long double b_coeff, long double c_coeff, long double* x1);
+int solve_linear(double b_coeff, double c_coeff, double* x1);
 
-// Сравнивает два числа типа long double
-char is_equal_approx(long double a, long double b);
+// Сравнивает два числа типа double
+char is_equal_approx(double a, double b);
 
 // Принимает коэффициенты a, b и c, указатели на x1 и x2. Решает квадратное уравнение. Возвращает количество корней, результаты вычислений помещает в *x1 и *x2 
-int solve_quadratic(long double a_coeff, long double b_coeff, long double c_coeff, long double* x1, long double* x2);
+int solve_quadratic(double a_coeff, double b_coeff, double c_coeff, double* x1, double* x2);
 
 int main(int argc, char* argv[])
 {
-	long double a_coeff = 0.0, b_coeff = 0.0, c_coeff = 0.0; // Коэф-ы в конечном уравнении
+	double a_coeff = 0.0, b_coeff = 0.0, c_coeff = 0.0; // Коэф-ы в конечном уравнении
 	
 	printf("ax^2 + bx + c = 0\n");
 	printf("Input coefficients: a b c\n");
 	scanf("%lf %lf %lf", &a_coeff, &b_coeff, &c_coeff); // Считываем коэф-ы
 
-	long double x1 = 0.0, x2 = 0.0;
+	double x1 = 0.0, x2 = 0.0;
 	
-	char roots = solve(a_coeff, b_coeff, c_coeff, &x1, &x2);
+	char roots = solve_quadratic(a_coeff, b_coeff, c_coeff, &x1, &x2);
 
 	switch (roots) // Смотрим, сколько корней
 	{
@@ -50,12 +50,12 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-char is_equal_approx(long double a, long double b)
+char is_equal_approx(double a, double b)
 {
-	return (abs(a - b) <= EPSILON);
+	return (fabs(a - b) <= EPSILON);
 }
 
-int solve_linear(long double b_coeff, long double c_coeff, long double* x1)
+int solve_linear(double b_coeff, double c_coeff, double* x1)
 {
 	if (!is_equal_approx(b_coeff, 0))
 	{
@@ -76,7 +76,7 @@ int solve_linear(long double b_coeff, long double c_coeff, long double* x1)
 	return 0;
 }
 
-int solve_quadratic(long double a_coeff, long double b_coeff, long double c_coeff, long double* x1, long double* x2)
+int solve_quadratic(double a_coeff, double b_coeff, double c_coeff, double* x1, double* x2)
 {
 	assert(isfinite(a_coeff));
 	assert(isfinite(b_coeff));
@@ -84,14 +84,14 @@ int solve_quadratic(long double a_coeff, long double b_coeff, long double c_coef
 	assert(x1 != NULL);
 	assert(x2 != NULL);
 
-	long double discriminant = b_coeff * b_coeff - 4 * a_coeff * c_coeff; // Дискриминант
+	double discriminant = b_coeff * b_coeff - 4 * a_coeff * c_coeff; // Дискриминант
 
 	if (discriminant < 0)
 	{ // Нет корней
 		return 0;
 	}
 
-	long double d_sqrt = sqrt(discriminant);
+	double d_sqrt = sqrt(discriminant);
 
 	if (a_coeff == 0)
 	{
