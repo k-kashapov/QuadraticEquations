@@ -7,15 +7,14 @@
 #define INF_ROOTS 100
 #define EPSILON 0.000001
 
-/*Принимает коэф-ы b и c, указатель на x1. Решает уравнение как линейное, возвращает количество корней: 1, INF или 0, ответ помещает в *x1 */
+// Принимает коэф-ы b и c, указатель на x1. Решает уравнение как линейное, возвращает количество корней: 1, INF или 0, ответ помещает в *x1 
 int solve_linear(long double b, long double c, long double* x1);
 
-/*Сравнивает два числа типа long double*/
+// Сравнивает два числа типа long double
 char is_equal_approx(long double a, long double b);
 
-/*Принимает коэффициенты a, b и c, указатели на x1 и x2. Возвращает количество корней, результаты вычислений помещает в *x1 и *x2 */
-int solve(long double a, long double b, long double c, long double* x1, long double* x2);
-
+// Принимает коэффициенты a, b и c, указатели на x1 и x2. Решает квадратное уравнение. Возвращает количество корней, результаты вычислений помещает в *x1 и *x2 
+int solve_quadratic(long double a, long double b, long double c, long double* x1, long double* x2);
 
 int main(int argc, char* argv[])
 {
@@ -77,7 +76,7 @@ int solve_linear(long double b, long double c, long double* x1)
 	return 0;
 }
 
-int solve(long double a, long double b, long double c, long double* x1, long double* x2)
+int solve_quadratic(long double a, long double b, long double c, long double* x1, long double* x2)
 {
 	assert(isfinite(a));
 	assert(isfinite(b));
