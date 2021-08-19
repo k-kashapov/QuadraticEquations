@@ -85,7 +85,6 @@ int solve_quadratic(long double a, long double b, long double c, long double* x1
 	assert(x2 != NULL);
 
 	long double d = b * b - 4 * a * c; // Дискриминант
-	int lin = 0;
 
 	if (d < 0)
 	{ // Нет корней
