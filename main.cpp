@@ -2,7 +2,7 @@
 #include <math.h>
 #include <assert.h>
 
-#pragma warning(disable:4996)
+#pragma warning(disable:4996) // Отключает ошибку, связанную со scanf, в Visual Studio
 
 const int INF_ROOTS = 100;
 const double EPSILON = 0.000001;
