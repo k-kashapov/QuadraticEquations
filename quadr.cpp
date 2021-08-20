@@ -3,13 +3,13 @@
 #include <assert.h>
 #include "quadr.h"
 
-/// Константа для сравнения чисел типа double
+/// РљРѕРЅСЃС‚Р°РЅС‚Р° РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ С‡РёСЃРµР» С‚РёРїР° double
 const double EPSILON = 0.000001;
 
 /**
- * @brief Сравнивает два числа типа double
+ * @brief РЎСЂР°РІРЅРёРІР°РµС‚ РґРІР° С‡РёСЃР»Р° С‚РёРїР° double
  * @param [in] a, b
- * \return 1, если a равно b; 0, если нет
+ * \return 1, РµСЃР»Рё a СЂР°РІРЅРѕ b; 0, РµСЃР»Рё РЅРµС‚
  */
 char is_equal_approx(double a, double b)
 {
@@ -17,11 +17,11 @@ char is_equal_approx(double a, double b)
 }
 
 /**
- * @brief Решает уравнение как линейное
- * @param [in] b_coeff Коэффициент при x
- * @param [in] c_coeff Свободный член
- * @param [in] *x1 Ссылка на переменную, в которую будет помещён ответ
- * \return Количество корней: 1, INF или 0
+ * @brief Р РµС€Р°РµС‚ СѓСЂР°РІРЅРµРЅРёРµ РєР°Рє Р»РёРЅРµР№РЅРѕРµ
+ * @param [in] b_coeff РљРѕСЌС„С„РёС†РёРµРЅС‚ РїСЂРё x
+ * @param [in] c_coeff РЎРІРѕР±РѕРґРЅС‹Р№ С‡Р»РµРЅ
+ * @param [in] *x1 РЎСЃС‹Р»РєР° РЅР° РїРµСЂРµРјРµРЅРЅСѓСЋ, РІ РєРѕС‚РѕСЂСѓСЋ Р±СѓРґРµС‚ РїРѕРјРµС‰С‘РЅ РѕС‚РІРµС‚
+ * \return РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕСЂРЅРµР№: 1, INF РёР»Рё 0
  */
 int solve_linear(double b_coeff, double c_coeff, double* x1)
 {
@@ -33,7 +33,7 @@ int solve_linear(double b_coeff, double c_coeff, double* x1)
     else
         if (is_equal_approx(c_coeff, 0))
         {
-            // Все коэф-ы равны нулю => Х принадлежит (-Inf; Inf)
+            // Р’СЃРµ РєРѕСЌС„-С‹ СЂР°РІРЅС‹ РЅСѓР»СЋ => РҐ РїСЂРёРЅР°РґР»РµР¶РёС‚ (-Inf; Inf)
             return INF_ROOTS;
         }
         else
@@ -46,10 +46,10 @@ int solve_linear(double b_coeff, double c_coeff, double* x1)
 }
 
 /**
- * @brief Решает квадратное уравнение, результаты вычислений помещает в *x1 и *x2
- * \param [in] a,b,c Коэффициенты
- * \param [in] *x1, *x2 Указатели на x1 и x2
- * \return Количество корней
+ * @brief Р РµС€Р°РµС‚ РєРІР°РґСЂР°С‚РЅРѕРµ СѓСЂР°РІРЅРµРЅРёРµ, СЂРµР·СѓР»СЊС‚Р°С‚С‹ РІС‹С‡РёСЃР»РµРЅРёР№ РїРѕРјРµС‰Р°РµС‚ РІ *x1 Рё *x2
+ * \param [in] a,b,c РљРѕСЌС„С„РёС†РёРµРЅС‚С‹
+ * \param [in] *x1, *x2 РЈРєР°Р·Р°С‚РµР»Рё РЅР° x1 Рё x2
+ * \return РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕСЂРЅРµР№
  */
 int solve_quadratic(double a_coeff, double b_coeff, double c_coeff, double* x1, double* x2)
 {
@@ -59,10 +59,10 @@ int solve_quadratic(double a_coeff, double b_coeff, double c_coeff, double* x1, 
     assert(x1 != NULL);
     assert(x2 != NULL);
 
-    double discriminant = b_coeff * b_coeff - 4 * a_coeff * c_coeff; // Дискриминант
+    double discriminant = b_coeff * b_coeff - 4 * a_coeff * c_coeff; // Р”РёСЃРєСЂРёРјРёРЅР°РЅС‚
 
     if (discriminant < 0)
-    { // Нет корней
+    { // РќРµС‚ РєРѕСЂРЅРµР№
         return 0;
     }
 
