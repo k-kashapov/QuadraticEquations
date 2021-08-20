@@ -3,10 +3,10 @@
 #include "test.h"
 
 /**
- * @brief Добавить тест сравнения даблов
+ * @brief Р”РѕР±Р°РІРёС‚СЊ С‚РµСЃС‚ СЃСЂР°РІРЅРµРЅРёСЏ РґР°Р±Р»РѕРІ
  * 
- * \param a, b Даблы
- * \param res Ожидаемый результат
+ * \param a, b Р”Р°Р±Р»С‹
+ * \param res РћР¶РёРґР°РµРјС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚
  */
 void addTestEquals(double a, double b, char res) {
     
@@ -18,13 +18,13 @@ void addTestEquals(double a, double b, char res) {
 }
 
 /**
- * @brief Добавить тест квадратного уравнения
+ * @brief Р”РѕР±Р°РІРёС‚СЊ С‚РµСЃС‚ РєРІР°РґСЂР°С‚РЅРѕРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ
  * 
- * \param a, b, c Коэффициенты уравнения
- * \param res Ожидаемое количество корней
- * \param x1_res Ожидаемое значение x1
- * \param x2_res Ожидаемое значение x2
- * \param comment Комментарий к тесту
+ * \param a, b, c РљРѕСЌС„С„РёС†РёРµРЅС‚С‹ СѓСЂР°РІРЅРµРЅРёСЏ
+ * \param res РћР¶РёРґР°РµРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕСЂРЅРµР№
+ * \param x1_res РћР¶РёРґР°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ x1
+ * \param x2_res РћР¶РёРґР°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ x2
+ * \param comment РљРѕРјРјРµРЅС‚Р°СЂРёР№ Рє С‚РµСЃС‚Сѓ
  */
 void addTestQuadr(double a, double b, double c, int res, double x1_res, double x2_res, const char *comment) 
 {
@@ -42,7 +42,7 @@ void addTestQuadr(double a, double b, double c, int res, double x1_res, double x
 }
 
 /**
- * @brief Прогоняет программу через юнит-тесты
+ * @brief РџСЂРѕРіРѕРЅСЏРµС‚ РїСЂРѕРіСЂР°РјРјСѓ С‡РµСЂРµР· СЋРЅРёС‚-С‚РµСЃС‚С‹
  */
 void start_tests() 
 {
