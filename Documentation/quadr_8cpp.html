@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prog: Файл quadr.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prog
+   </div>
+   <div id="projectbrief">A program for solving quadratic equations</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл quadr.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="quadr_8h_source.html">quadr.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7df3518aba36d9562e9ba44026f4bf90"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quadr_8cpp.html#a7df3518aba36d9562e9ba44026f4bf90">is_equal_approx</a> (double a, double b)</td></tr>
+<tr class="memdesc:a7df3518aba36d9562e9ba44026f4bf90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает два числа типа double.  <a href="quadr_8cpp.html#a7df3518aba36d9562e9ba44026f4bf90">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7df3518aba36d9562e9ba44026f4bf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7132d9d409587ed04d77ce4da4e8b6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quadr_8cpp.html#a7132d9d409587ed04d77ce4da4e8b6ba">solve_linear</a> (double b_coeff, double c_coeff, double *x1)</td></tr>
+<tr class="memdesc:a7132d9d409587ed04d77ce4da4e8b6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решает уравнение как линейное  <a href="quadr_8cpp.html#a7132d9d409587ed04d77ce4da4e8b6ba">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7132d9d409587ed04d77ce4da4e8b6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533edb467d7db77ba0aaddef3ae7649b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quadr_8cpp.html#a533edb467d7db77ba0aaddef3ae7649b">solve_quadratic</a> (double a_coeff, double b_coeff, double c_coeff, double *x1, double *x2)</td></tr>
+<tr class="memdesc:a533edb467d7db77ba0aaddef3ae7649b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решает квадратное уравнение, результаты вычислений помещает в *x1 и *x2.  <a href="quadr_8cpp.html#a533edb467d7db77ba0aaddef3ae7649b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a533edb467d7db77ba0aaddef3ae7649b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a596344e5a2992d2beec43b76a6294de0"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quadr_8cpp.html#a596344e5a2992d2beec43b76a6294de0">EPSILON</a> = 0.000001</td></tr>
+<tr class="memdesc:a596344e5a2992d2beec43b76a6294de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константа для сравнения чисел типа double.  <a href="quadr_8cpp.html#a596344e5a2992d2beec43b76a6294de0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a596344e5a2992d2beec43b76a6294de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a7df3518aba36d9562e9ba44026f4bf90" name="a7df3518aba36d9562e9ba44026f4bf90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df3518aba36d9562e9ba44026f4bf90">&#9670;&nbsp;</a></span>is_equal_approx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char is_equal_approx </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сравнивает два числа типа double. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a,b</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1, если a равно b; 0, если нет </dd></dl>
+
+</div>
+</div>
+<a id="a7132d9d409587ed04d77ce4da4e8b6ba" name="a7132d9d409587ed04d77ce4da4e8b6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7132d9d409587ed04d77ce4da4e8b6ba">&#9670;&nbsp;</a></span>solve_linear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int solve_linear </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Решает уравнение как линейное </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b_coeff</td><td>Коэффициент при x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c_coeff</td><td>Свободный член </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*x1</td><td>Ссылка на переменную, в которую будет помещён ответ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество корней: 1, INF или 0 </dd></dl>
+
+</div>
+</div>
+<a id="a533edb467d7db77ba0aaddef3ae7649b" name="a533edb467d7db77ba0aaddef3ae7649b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533edb467d7db77ba0aaddef3ae7649b">&#9670;&nbsp;</a></span>solve_quadratic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int solve_quadratic </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Решает квадратное уравнение, результаты вычислений помещает в *x1 и *x2. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a,b,c</td><td>Коэффициенты </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*x1,*x2</td><td>Указатели на x1 и x2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество корней </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a596344e5a2992d2beec43b76a6294de0" name="a596344e5a2992d2beec43b76a6294de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596344e5a2992d2beec43b76a6294de0">&#9670;&nbsp;</a></span>EPSILON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double EPSILON = 0.000001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Константа для сравнения чисел типа double. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
