@@ -1,9 +1,17 @@
+/*****************************************************************//**
+ * \file   test.cpp
+ * \brief  
+ * 
+ * \author Kamil
+ * \date   August 2021
+ *********************************************************************/
+
 #include <stdio.h>
 #include <assert.h>
 #include "test.h"
 
 /**
- * @brief Добавить тест сравнения даблов
+ * @brief Добавляет тест сравнения даблов
  * 
  * \param a, b Даблы
  * \param res Ожидаемый результат
@@ -18,7 +26,7 @@ void addTestEquals(double a, double b, char res) {
 }
 
 /**
- * @brief Добавить тест квадратного уравнения
+ * @brief Добавляет тест квадратного уравнения
  * 
  * \param a, b, c Коэффициенты уравнения
  * \param res Ожидаемое количество корней
@@ -44,22 +52,24 @@ void addTestQuadr(double a, double b, double c, int res, double x1_res, double x
 /**
  * @brief Прогоняет программу через юнит-тесты
  */
-void start_tests() 
+int start_tests() 
 {
-    addTestEquals(5.43, -99999.0, 0);
-    addTestEquals(0.0, 0.0, 1);
-    addTestEquals(0.123451, 0.12345, 0);
-    addTestEquals(-0.000001, 0.0, 0);
-    addTestEquals(0.0000004, 0.0, 1);
+    //                     a         b   res
+    addTestEquals (     5.43, -99999.0,    0);
+    addTestEquals (      0.0,      0.0,    1);
+    addTestEquals ( 0.123451,  0.12345,    0);
+    addTestEquals (-0.000001,      0.0,    0);
+    addTestEquals (0.0000004,      0.0,    1);
 
-    addTestQuadr(4, 5, 1, 2, -0.25, -1, "ordinary quad equation");
-    addTestQuadr(0, 5, -1, 1, 0.2, 0.0, "ordinary lin equation");
-    addTestQuadr(4, 0, -1, 2, 0.5, -0.5, "quadr equation, b = 0");
-    addTestQuadr(4, -5, 0, 2, 1.25, 0.0, "quadr equation, c = 0");
-    addTestQuadr(0, 0, 0, INF_ROOTS, 0.0, 0.0, "0 = 0");
-    addTestQuadr(4, -1, 67, 0, 0.0, 0.0, "quadr equation, d < 0");
-    addTestQuadr(9, 6, 1, 1, -1.0 / 3, 0.0, "quadr equation, d = 0");
-    addTestQuadr(0, 0, 3, 0, 0.0, 0.0, "3 = 0");
+    //            a   b   c  Кол-во корней         x1    x2
+    addTestQuadr (4,  5,  1,             2,     -0.25,   -1, "ordinary quad equation");
+    addTestQuadr (0,  5, -1,             1,       0.2,  0.0, "ordinary lin equation");
+    addTestQuadr (4,  0, -1,             2,       0.5, -0.5, "quadr equation, b = 0");
+    addTestQuadr (4, -5,  0,             2,      1.25,  0.0, "quadr equation, c = 0");
+    addTestQuadr (0,  0,  0,     INF_ROOTS,       0.0,  0.0, "0 = 0");
+    addTestQuadr (4, -1, 67,             0,       0.0,  0.0, "quadr equation, d < 0");
+    addTestQuadr (9,  6,  1,             1,  -1.0 / 3,  0.0, "quadr equation, d = 0");
+    addTestQuadr (0,  0,  3,             0,       0.0,  0.0, "3 = 0");
 
     printf("All tests complete!");
 }

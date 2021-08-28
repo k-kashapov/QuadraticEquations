@@ -2,4 +2,4 @@
 
 #include "quadr.h"
 
-void start_tests();
+int start_tests();
